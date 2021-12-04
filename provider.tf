@@ -6,6 +6,8 @@ terraform {
     }
   }
   backend "gcs" {
+    bucket  = "gompei-terraform-bucket"
+    prefix  = "settings/terraform.tfstate"
   }
 }
 
