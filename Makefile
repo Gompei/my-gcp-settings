@@ -8,7 +8,7 @@ help: ## 各makeコマンドの説明を表示します
 
 .PHONY: init
 init: ## テラフォームの設定ファイルを含む作業ディレクトリを初期化します
-	terraform init
+	GOOGLE_APPLICATION_CREDENTIALS="$(MAKEFILE_DIR)/credentials.json" terraform init
 
 .PHONY: plan
 plan: ## テラフォームによる実行計画を参照します
